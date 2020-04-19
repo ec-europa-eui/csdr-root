@@ -1,0 +1,48 @@
+{
+    "name": "csdr",
+    "version": "7.0.0",
+    "license": "EUPL-1.1",
+    "scripts": {
+        "ng": "ng",
+        "help": "eui-scripts help",
+        "init": "eui-scripts csdr-init",
+        "sync-only": "eui-scripts csdr-sync",
+        "sync": "eui-scripts csdr-sync && eui-scripts csdr-upgrade-deps",
+        "upgrade:deps": "eui-scripts csdr-upgrade-deps",
+        "pkg:init": "eui-scripts csdr-cli --pkg",
+        "pkg:clean": "eui-scripts clean-package",
+        "pkg:build": "eui-scripts build-package",
+        "pkg:test": "eui-scripts test-package",
+        "pkg:build-all": "eui-scripts build-all",
+        "element:build": "eui-scripts build-element",
+        "element:serve": "eui-scripts serve-element",
+        "pkg:release": "eui-scripts release-package",
+        "app:init": "eui-scripts csdr-cli --app",
+        "app:release": "eui-scripts release-app",
+        "app:build": "eui-scripts build-app",
+        "app:serve": "eui-scripts serve-app",
+        "app:serve-mock": "eui-scripts serve-mock"
+    },
+    "private": true,
+    "dependencies": {
+        "@eui/tools": "^4.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://webgate.ec.europa.eu/CITnet/stash/projects/csdr/repos/root"
+    },
+    "browserslist": [
+        "> 0.5% in alt-eu",
+        "last 2 version",
+        "ie 11",
+        "not dead",
+        "not op_mini all"
+    ],
+    "resolutions": {
+        "lodash": ">=4.17.15",
+        "handlebars": ">=4.5.3",
+        "mem": ">=4.3.0",
+        "https-proxy-agent": ">=2.2.3",
+        "minimatch": ">=3.0.4"
+    }
+}

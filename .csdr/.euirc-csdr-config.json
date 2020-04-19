@@ -1,0 +1,41 @@
+{
+    "name": "CSDR",
+    "paths": {
+        "packages": "packages",
+        "nodeModules": "node_modules"
+    },
+    "npm": {
+        "registry": {
+            "install": "https://ecdevops.eu/repository/npm-all/",
+            "default": "https://ecdevops.eu/repository/npm-opsys/",
+            "default2": "https://csdr-nexus.devops.tech.ec.europa.eu/repository/npm-private/"
+        },
+        "fixedDependencies": {
+            "@eui/tools": "^4.0.0"
+        }
+    },
+    "sonar": {
+        "host": "https://sonar.ecdevops.eu"
+    },
+    "confluence": {
+        "host": "https://webgate.ec.europa.eu/CITnet/confluence",
+        "projectName": "CSDR",
+        "packagesHistoryPageId": "882425040"
+    },
+    "slack": {
+        "host": "",
+        "hookToken": "",
+        "channels": {
+            "frontend": "csdr-timeline",
+            "backend": "csdr-timeline-backend",
+            "project": "csdr-timeline-app"
+        }
+    },
+    "issuesManager": {
+        "host": "https://webgate.ec.europa.eu/CITnet/jira/browse/"
+    },
+    "devopsMetadata": {
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/devops-metadata.git",
+        "folder": "packages/devops-metadata"
+    }
+}

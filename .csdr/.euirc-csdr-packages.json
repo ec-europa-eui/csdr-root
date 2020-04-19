@@ -1,0 +1,2824 @@
+{
+    "eui": {
+        "name": "eui",
+        "parent": true,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui.git",
+        "teams": [
+            "eUI"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "build": {
+            "exec": false,
+            "publicRegistry": "https://registry.npmjs.org"
+        },
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "packages": {
+            "eui-styles": {
+                "name": "eui-styles",
+                "folder": "styles",
+                "publishFolder": "dist",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/styles",
+                "stylesPackage": true,
+                "tsPackage": false,
+                "localSymlink": true,
+                "stylesheets": [
+                    "eui-light",
+                    "eui-showcase",
+                    "eui-shell-extended",
+                    "eui",
+                    "eui-ecl"
+                ],
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-base": {
+                "name": "eui-base",
+                "folder": "base",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/base",
+                "build": {
+                    "generateDoc": false,
+                    "sonarScanner": true,
+                    "internalDepedency": true
+                },
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-core": {
+                "name": "eui-core",
+                "folder": "core",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/core",
+                "build": {
+                    "generateDoc": true,
+                    "sonarScanner": true
+                },
+                "deps": [
+                    "eui-base"
+                ],
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-externals": {
+                "name": "eui-externals",
+                "folder": "externals",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/externals",
+                "build": {
+                    "generateDoc": false,
+                    "sonarScanner": true
+                },
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-cli": {
+                "name": "eui-cli",
+                "folder": "cli",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/cli",
+                "build": {
+                    "exec": false
+                },
+                "tsPackage": false,
+                "pathInclude": false,
+                "configExposed": false,
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-deps-base": {
+                "name": "eui-deps-base",
+                "folder": "deps/base",
+                "child": true,
+                "parentPkg": "eui",
+                "npmPkg": "@eui/deps-base",
+                "build": {
+                    "exec": false
+                },
+                "tsPackage": false,
+                "pathInclude": false,
+                "configExposed": false,
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            }
+        }
+    },
+    "eui-ecl": {
+        "name": "eui-ecl",
+        "parent": true,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-ecl-ui.git",
+        "teams": [
+            "eUI"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "build": {
+            "exec": false,
+            "publicRegistry": "https://registry.npmjs.org"
+        },
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "packages": {
+            "eui-ecl-styles": {
+                "name": "eui-ecl-styles",
+                "folder": "styles",
+                "publishFolder": "dist",
+                "child": true,
+                "parentPkg": "eui-ecl",
+                "npmPkg": "@eui/ecl-styles",
+                "stylesPackage": true,
+                "tsPackage": false,
+                "localSymlink": true,
+                "stylesheets": [
+                    "ecl"
+                ],
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            },
+            "eui-ecl-core": {
+                "name": "eui-ecl-core",
+                "folder": "core",
+                "child": true,
+                "parentPkg": "eui-ecl",
+                "npmPkg": "@eui/ecl-core",
+                "build": {
+                    "generateDoc": true,
+                    "sonarScanner": true
+                },
+                "deps": [
+                    "eui-base"
+                ],
+                "slack": {
+                    "channel": "csdr-timeline-eui"
+                }
+            }
+        }
+    },
+    "eui-ionic": {
+        "name": "eui-ionic",
+        "npmPkg": "@eui/ionic",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-ionic-ui.git",
+        "teams": [
+            "all-frontend"
+        ],
+        "build": {
+            "generateDoc": true,
+            "sonarScanner": true,
+            "publicRegistry": "https://registry.npmjs.org"
+        },
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        }
+    },
+    "eui-tools": {
+        "name": "eui-tools",
+        "npmPkg": "@eui/tools",
+        "nodeJs": true,
+        "build": {
+            "generateDoc": false,
+            "sonarScanner": false,
+            "masterBranchOnly": true,
+            "ownDepsOnly": true,
+            "publicRegistry": "https://registry.npmjs.org",
+            "jest": true
+        },
+        "tsPackage": false,
+        "pathInclude": false,
+        "localSymlink": true,
+        "configExposed": false,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-tools.git",
+        "teams": [
+            "eUI"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        }
+    },
+    "eui-dynamic-forms-ui": {
+        "name": "eui-dynamic-forms-ui",
+        "npmPkg": "@eui/dynamic-forms",
+        "deps": [
+            "eui-core"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-dynamic-forms-ui.git",
+        "teams": [
+            "digit-eUI",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "build": {
+            "publicRegistry": "https://registry.npmjs.org"
+        },
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        }
+    },
+    "eui-platform-api-backend": {
+        "name": "eui-platform-api-backend",
+        "npmPkg": "@eui/platform-api",
+        "backend": true,
+        "nodeJs": true,
+        "build": {
+            "generateDoc": false,
+            "sonarScanner": false,
+            "jest": true
+        },
+        "tsPackage": false,
+        "pathInclude": false,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-platform-api-backend.git",
+        "teams": [
+            "digit-eUI",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "none"
+        ]
+    },
+    "eui-web-components": {
+        "name": "eui-web-components",
+        "npmPkg": "@eui/web-components",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-web-components-ui.git",
+        "teams": [
+            "digit-eUI",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "build": {
+            "stenciljs": true,
+            "publicRegistry": "https://registry.npmjs.org"
+        }
+    },
+    "eui-zipkin-trace-ui": {
+        "name": "eui-zipkin-trace-ui",
+        "npmPkg": "@eui/zipkin-trace",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eui-zipkin-trace-ui.git",
+        "teams": [
+            "digit-eUI",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "devops-metadata": {
+        "name": "devops-metadata",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/devops-metadata.git",
+        "build": {
+            "exec": false
+        }
+    },
+    "csdr-core-ui": {
+        "name": "csdr-core-ui",
+        "npmPkg": "@csdr/core",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/csdr-core-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "csdr-zipkin-tracing-ui": {
+        "name": "csdr-zipkin-tracing-ui",
+        "npmPkg": "@csdr/zipkin-tracing",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/csdr-zipkin-tracing-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ]
+    },
+    "mywp-config": {
+        "name": "mywp-config",
+        "npmPkg": "@mywp/config",
+        "config": true,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-my-workplace-config.git",
+        "build": {
+            "exec": false,
+            "sonarScanner": false,
+            "masterBranchOnly": true
+        },
+        "tsPackage": false,
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "mywp-mock": {
+        "name": "mywp-mock",
+        "npmPkg": "@mywp/mock",
+        "config": true,
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-my-workplace-mock.git",
+        "build": {
+            "exec": false,
+            "sonarScanner": false,
+            "masterBranchOnly": true
+        },
+        "tsPackage": false,
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "mywp-shared-ui": {
+        "name": "mywp-shared-ui",
+        "npmPkg": "@mywp/shared",
+        "deps": [
+            "cc-shared-ui",
+            "cc-document-manager-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-shared-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "mywp-notifications-ui": {
+        "name": "mywp-notifications-ui",
+        "npmPkg": "@mywp/notifications",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-notifications-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "notification"
+        ]
+    },
+    "mywp-core-ui": {
+        "name": "mywp-core-ui",
+        "npmPkg": "@mywp/core",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-core-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "mywp-portfolio-ui": {
+        "name": "mywp-portfolio-ui",
+        "npmPkg": "@mywp/portfolio",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-portfolio-ui.git",
+        "teams": [
+            "cc-portfolio",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "portfolio"
+        ]
+    },
+    "mywp-portfolio-el-ui": {
+        "name": "mywp-portfolio-el-ui",
+        "element": true,
+        "npmPkg": "@mywp/portfolio-el",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-portfolio-el-ui.git",
+        "teams": [
+            "cc-portfolio",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "portfolio"
+        ]
+    },
+    "mywp-portfolio-admin-ui": {
+        "name": "mywp-portfolio-admin-ui",
+        "npmPkg": "@mywp/portfolio-admin",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-portfolio-admin-ui.git",
+        "teams": [
+            "cc-portfolio",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "portfolio"
+        ]
+    },
+    "mywp-common-widgets-ui": {
+        "name": "mywp-common-widgets-ui",
+        "npmPkg": "@mywp/common-widgets",
+        "deps": [
+            "mywp-shared-ui",
+            "mywp-core-ui",
+            "mywp-portfolio-ui",
+            "cotg-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-common-widgets-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "dashboard"
+        ]
+    },
+    "mywp-dashboard-ui": {
+        "name": "mywp-dashboard-ui",
+        "npmPkg": "@mywp/dashboard",
+        "deps": [
+            "mywp-common-widgets-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-dashboard-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "dashboard"
+        ]
+    },
+    "mywp-search-ui": {
+        "name": "mywp-search-ui",
+        "npmPkg": "@mywp/search",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-search-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "search"
+        ]
+    },
+    "mywp-admin-ui": {
+        "name": "mywp-admin-ui",
+        "npmPkg": "@mywp/admin",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-admin-ui.git",
+        "teams": [
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "mywp-admin"
+        ]
+    },
+    "mywp-collab-widgets-ui": {
+        "name": "mywp-collab-widgets-ui",
+        "npmPkg": "@mywp/collab-widgets",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-collab-widgets-ui.git",
+        "teams": [
+            "digit-collab",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "dashboard"
+        ]
+    },
+    "opsys-shared-ui": {
+        "name": "opsys-shared-ui",
+        "npmPkg": "@opsys/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-shared-ui.git",
+        "teams": [
+            "opsys-result",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-all"
+        ]
+    },
+    "opsys-result-ui": {
+        "name": "opsys-result-ui",
+        "npmPkg": "@opsys/result",
+        "deps": [
+            "mywp-shared-ui",
+            "opsys-oe-track3-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-result-ui.git",
+        "teams": [
+            "opsys-result",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track1"
+        ]
+    },
+    "opsys-result-quality-management-ui": {
+        "name": "opsys-result-quality-management-ui",
+        "npmPkg": "@opsys/result-quality-management",
+        "deps": [
+            "mywp-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-result-quality-management-ui.git",
+        "teams": [
+            "opsys-result",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track1"
+        ]
+    },
+    "opsys-dac-form-ui": {
+        "name": "opsys-dac-form-ui",
+        "npmPkg": "@opsys/dac-form",
+        "deps": [
+            "mywp-shared-ui",
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-dac-form-ui.git",
+        "teams": [
+            "opsys-dac",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track1"
+        ]
+    },
+    "opsys-epc-erq-budget-breakdown-ui": {
+        "name": "opsys-epc-erq-budget-breakdown-ui",
+        "npmPkg": "@opsys/epc-erq-budget-breakdown",
+        "deps": [
+            "opsys-epc-erq-utilities-ui",
+            "opsys-epc-erq-spreadsheet-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-erq-budget-breakdown-ui.git",
+        "teams": [
+            "opsys-eProc-eRequest",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-erq-catalog-ui": {
+        "name": "opsys-epc-erq-catalog-ui",
+        "npmPkg": "@opsys/epc-erq-catalog",
+        "deps": [
+            "opsys-epc-erq-utilities-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-erq-catalog-ui.git",
+        "teams": [
+            "opsys-eProc-eRequest",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-erq-spreadsheet-ui": {
+        "name": "opsys-epc-erq-spreadsheet-ui",
+        "npmPkg": "@opsys/epc-erq-spreadsheet",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-erq-spreadsheet-ui.git",
+        "teams": [
+            "opsys-eProc-eRequest",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-erq-rfs-ui": {
+        "name": "opsys-epc-erq-rfs-ui",
+        "npmPkg": "@opsys/epc-erq-rfs",
+        "deps": [
+            "opsys-epc-erq-budget-breakdown-ui",
+            "opsys-epc-erq-catalog-ui",
+            "opsys-epc-erq-utilities-ui",
+            "cc-document-manager-ui",
+            "opsys-oe-track3-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-erq-rfs-ui.git",
+        "teams": [
+            "opsys-eProc-eRequest",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-erq-utilities-ui": {
+        "name": "opsys-epc-erq-utilities-ui",
+        "npmPkg": "@opsys/epc-erq-utilities",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-erq-utilities-ui.git",
+        "teams": [
+            "opsys-eProc-eRequest",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-procedure-manager-ui": {
+        "name": "opsys-epc-procedure-manager-ui",
+        "npmPkg": "@opsys/epc-procedure-manager",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-procedure-manager-ui.git",
+        "teams": [
+            "opsys-eProc-procedure-manager",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-epc-esub-bo-ui": {
+        "name": "opsys-epc-esub-bo-ui",
+        "npmPkg": "@opsys/epc-esub-bo",
+        "deps": [
+            "cc-document-manager-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-esub-bo-ui.git",
+        "teams": [
+            "opsys-eSubmission",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track2"
+        ]
+    },
+    "opsys-oe-track3-ui": {
+        "name": "opsys-oe-track3-ui",
+        "npmPkg": "@opsys/oe-track3",
+        "deps": [
+            "mywp-shared-ui",
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-oe-track3-ui.git",
+        "teams": [
+            "opsys-iop-map",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "opsys-budget-envelope-ui": {
+        "name": "opsys-budget-envelope-ui",
+        "npmPkg": "@opsys/budget-envelope",
+        "deps": [
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-budget-envelope-ui.git",
+        "teams": [
+            "opsys-iop-map",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "opsys-map-ui": {
+        "name": "opsys-map-ui",
+        "npmPkg": "@opsys/map",
+        "deps": [
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-map-ui.git",
+        "teams": [
+            "opsys-iop-map",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "opsys-tag-manager-ui": {
+        "name": "opsys-tag-manager-ui",
+        "npmPkg": "@opsys/tag-manager",
+        "deps": [
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-tag-manager-ui.git",
+        "teams": [
+            "opsys-tag",
+            "opsys-iop-map",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "opsys-demand-manager-ui": {
+        "name": "opsys-demand-manager-ui",
+        "npmPkg": "@opsys/demand-manager",
+        "deps": [
+            "opsys-map-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-demand-manager-ui.git",
+        "teams": [
+            "opsys-dac",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "opsys-payment-forecast-ui": {
+        "name": "opsys-payment-forecast-ui",
+        "npmPkg": "@opsys/payment-forecast",
+        "deps": [
+            "mywp-shared-ui",
+            "opsys-oe-track3-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-payment-forecast-ui.git",
+        "teams": [
+            "opsys-near",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-forecasting"
+        ]
+    },
+    "opsys-level2-forecast-ui": {
+        "name": "opsys-level2-forecast-ui",
+        "npmPkg": "@opsys/level2-forecast",
+        "deps": [
+            "mywp-shared-ui",
+            "opsys-oe-track3-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-level2-forecast-ui.git",
+        "teams": [
+            "opsys-near",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-forecasting"
+        ]
+    },
+    "opsys-forecasting-dashboard-ui": {
+        "name": "opsys-forecasting-dashboard-ui",
+        "npmPkg": "@opsys/forecasting-dashboard",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-forecasting-dashboard-ui.git",
+        "teams": [
+            "opsys-near",
+            "opsys-dashboard",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-forecasting"
+        ]
+    },
+    "opsys-digit-dashboard-ui": {
+        "name": "opsys-digit-dashboard-ui",
+        "npmPkg": "@opsys/digit-dashboard",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-digit-dashboard-ui.git",
+        "teams": [
+            "opsys-dashboard",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-forecasting",
+            "opsys-dashboard"
+        ]
+    },
+    "cc-shared-ui": {
+        "name": "cc-shared-ui",
+        "npmPkg": "@cc/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-shared-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-reports",
+            "cc-task-manager",
+            "cc-all",
+            "cc-internal-communication",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "cc-process-centre-ui": {
+        "name": "cc-process-centre-ui",
+        "npmPkg": "@cc/process-centre",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-centre-ui.git",
+        "teams": [
+            "cc-process-centre",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "process-centre"
+        ]
+    },
+    "cc-process-centre-el-ui": {
+        "name": "cc-process-centre-el-ui",
+        "npmPkg": "@cc/process-centre-el",
+        "element": true,
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-centre-el-ui.git",
+        "teams": [
+            "cc-process-centre",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "process-centre"
+        ]
+    },
+    "cc-process-centre-admin-ui": {
+        "name": "cc-process-centre-admin-ui",
+        "npmPkg": "@cc/process-centre-admin",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-centre-admin-ui.git",
+        "teams": [
+            "cc-process-centre",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "process-centre"
+        ]
+    },
+    "cc-task-details-ui": {
+        "name": "cc-task-details-ui",
+        "npmPkg": "@cc/task-details",
+        "deps": [
+            "cc-shared-ui",
+            "cc-clock-ui",
+            "cc-document-manager-ui",
+            "cc-internal-communication-ui",
+            "cc-consultation-ui",
+            "cc-task-actions-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-details-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-consultation",
+            "cc-internal-communication",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-task-actions-ui": {
+        "name": "cc-task-actions-ui",
+        "npmPkg": "@cc/task-actions",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-actions-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-internal-communication-ui": {
+        "name": "cc-internal-communication-ui",
+        "npmPkg": "@cc/internal-communication",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-internal-communication-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-internal-communication",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-external-communication-ui": {
+        "name": "cc-external-communication-ui",
+        "npmPkg": "@cc/external-communication",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-external-communication-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-external-communication",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-consultation-ui": {
+        "name": "cc-consultation-ui",
+        "npmPkg": "@cc/consultation",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-consultation-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-consultation",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-task-manager-ui": {
+        "name": "cc-task-manager-ui",
+        "npmPkg": "@cc/task-manager",
+        "deps": [
+            "cc-shared-ui",
+            "cc-taxonomy-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-manager-ui.git",
+        "teams": [
+            "cc-task-manager",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-participants-ui": {
+        "name": "cc-participants-ui",
+        "npmPkg": "@cc/participants",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-participants-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-participants",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-document-manager-ui": {
+        "name": "cc-document-manager-ui",
+        "npmPkg": "@cc/document-manager",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-document-manager-ui.git",
+        "teams": [
+            "cc-document-manager",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ]
+    },
+    "cc-reports-ui": {
+        "name": "cc-reports-ui",
+        "npmPkg": "@cc/reports",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-reports-ui.git",
+        "teams": [
+            "cc-reports",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "cc-reports"
+        ]
+    },
+    "cc-process-orchestrator-ui": {
+        "name": "cc-process-orchestrator-ui",
+        "npmPkg": "@cc/process-orchestrator",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-orchestrator-ui.git",
+        "teams": [
+            "cc-process-orchestrator",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-clock-ui": {
+        "name": "cc-clock-ui",
+        "npmPkg": "@cc/clock",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-clock-ui.git",
+        "teams": [
+            "cc-clock",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-taxonomy-ui": {
+        "name": "cc-taxonomy-ui",
+        "npmPkg": "@cc/taxonomy",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-taxonomy-ui.git",
+        "teams": [
+            "cc-task-manager",
+            "cc-process-centre",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task",
+            "portfolio",
+            "process-centre"
+        ]
+    },
+    "cc-configuration-admin-ui": {
+        "name": "cc-configuration-admin-ui",
+        "npmPkg": "@cc/configuration-admin",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-configuration-admin-ui.git",
+        "teams": [
+            "cc-task-manager",
+            "cc-all",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "cc-configuration-admin"
+        ]
+    },
+    "cc-decide-cons-ui": {
+        "name": "cc-decide-cons-ui",
+        "npmPkg": "@cc/decide-cons",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-decide-cons-ui.git",
+        "teams": [
+            "cc-task-manager",
+            "cc-all",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-wfbuilder-ui": {
+        "name": "cc-wfbuilder-ui",
+        "npmPkg": "@cc/wfbuilder",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-wfbuilder-ui.git",
+        "teams": [
+            "cc-all",
+            "cc-wfbuilder",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-echecklist-admin-el-ui": {
+        "name": "cc-echecklist-admin-el-ui",
+        "element": true,
+        "deps": [
+            "cc-echecklist-admin-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-echecklist-admin-el-ui.git",
+        "teams": [
+            "cc-echecklist",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "echecklist-admin"
+        ],
+        "build": {
+            "sonarScanner": false
+        }
+    },
+    "cc-echecklist-admin-ui": {
+        "name": "cc-echecklist-admin-ui",
+        "npmPkg": "@cc/echecklist-admin",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-echecklist-admin-ui.git",
+        "teams": [
+            "cc-echecklist",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "echecklist-admin"
+        ]
+    },
+    "cc-echecklist-el-ui": {
+        "name": "cc-echecklist-el-ui",
+        "element": true,
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-echecklist-el-ui.git",
+        "teams": [
+            "cc-echecklist",
+            "cc-all",
+            "all-frontend"
+        ],
+        "build": {
+            "sonarScanner": false
+        },
+        "packageGroups": [
+            "echecklist",
+            "task"
+        ]
+    },
+    "cc-flex-el-ui": {
+        "name": "cc-flex-el-ui",
+        "element": true,
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-flex-el-ui.git",
+        "teams": [
+            "cc-flex",
+            "cc-all",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ],
+        "build": {
+            "sonarScanner": false
+        }
+    },
+    "sygma-sygma-ui": {
+        "name": "sygma-sygma-ui",
+        "npmPkg": "@sygma/sygma",
+        "deps": [
+            "sygma-sygma-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sygma-sygma-ui.git",
+        "teams": [
+            "rtd-sygma",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "sygma"
+        ]
+    },
+    "sygma-dynamic-forms-ui": {
+        "name": "sygma-dynamic-forms-ui",
+        "npmPkg": "@sygma/dynamic-forms",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sygma-dynamic-forms-ui.git",
+        "teams": [
+            "rtd-sygma",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "sygma"
+        ]
+    },
+    "ppxms-contract-details-ui": {
+        "name": "ppxms-contract-details-ui",
+        "npmPkg": "@ppxms/contract-details",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ppxms-contract-details-ui.git",
+        "teams": [
+            "rtd-ppxms",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "sygma"
+        ]
+    },
+    "ppxms-process-manager-ui": {
+        "name": "ppxms-process-manager-ui",
+        "npmPkg": "@ppxms/process-manager",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ppxms-process-manager-ui.git",
+        "teams": [
+            "rtd-ppxms",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "sygma"
+        ]
+    },
+    "ppxms-action-launcher-ui": {
+        "name": "ppxms-action-launcher-ui",
+        "npmPkg": "@ppxms/action-launcher",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ppxms-action-launcher-ui.git",
+        "teams": [
+            "rtd-ppxms",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "sygma"
+        ]
+    },
+    "cotg-shared-ui": {
+        "name": "cotg-shared-ui",
+        "npmPkg": "@cotg/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cotg-shared-ui.git",
+        "teams": [
+            "digit-cotg",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "cotg"
+        ]
+    },
+    "cotg-my-requests-ui": {
+        "name": "cotg-my-requests-ui",
+        "npmPkg": "@cotg/my-requests",
+        "deps": [
+            "cotg-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cotg-my-requests-ui.git",
+        "teams": [
+            "digit-cotg",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "cotg"
+        ]
+    },
+    "cotg-time-management-ui": {
+        "name": "cotg-time-management-ui",
+        "npmPkg": "@cotg/time-management",
+        "deps": [
+            "cotg-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cotg-time-management-ui.git",
+        "teams": [
+            "digit-cotg",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "cotg"
+        ]
+    },
+    "eamr-report-ui": {
+        "name": "eamr-report-ui",
+        "npmPkg": "@eamr/report",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eamr-report-ui.git",
+        "teams": [
+            "devco-eamr",
+            "all-frontend"
+        ]
+    },
+    "ecfin-rss-feed-ui": {
+        "name": "ecfin-rss-feed-ui",
+        "npmPkg": "@ecfin/rss-feed",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ecfin-rss-feed-ui.git",
+        "teams": [
+            "ecfin",
+            "all-frontend"
+        ]
+    },
+    "ease-admin-ui": {
+        "name": "ease-admin-ui",
+        "npmPkg": "@ease/admin",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ease-admin-ui.git",
+        "teams": [
+            "ease",
+            "all-frontend"
+        ]
+    },
+    "eac-core-ui": {
+        "name": "eac-core-ui",
+        "npmPkg": "@eac/core",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eac-core-ui.git",
+        "teams": [
+            "eac",
+            "all-frontend"
+        ]
+    },
+    "eac-shared-ui": {
+        "name": "eac-shared-ui",
+        "npmPkg": "@eac/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eac-shared-ui.git",
+        "teams": [
+            "eac",
+            "all-frontend"
+        ]
+    },
+    "sfc-fo-shared-ui": {
+        "name": "sfc-fo-shared-ui",
+        "npmPkg": "@sfc-fo/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-shared-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-fo-core-ui": {
+        "name": "sfc-fo-core-ui",
+        "npmPkg": "@sfc-fo/core",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-core-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-fo-cci-request-ui": {
+        "name": "sfc-fo-cci-request-ui",
+        "npmPkg": "@sfc-fo/cci-request",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-cci-request-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-fo-cci-request-el-ui": {
+        "name": "sfc-fo-cci-request-el-ui",
+        "element": true,
+        "npmPkg": "@sfc-fo/cci-request-el",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-cci-request-el-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-fo-comdec-ui": {
+        "name": "sfc-fo-comdec-ui",
+        "npmPkg": "@sfc-fo/comdec",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-comdec-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-fo-comdec-el-ui": {
+        "name": "sfc-fo-comdec-el-ui",
+        "element": true,
+        "npmPkg": "@sfc-fo/comdec-el",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-comdec-el-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-bo-core-ui": {
+        "name": "sfc-bo-core-ui",
+        "npmPkg": "@sfc-bo/core",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-bo-core-ui.git",
+        "teams": [
+            "sfc-bo",
+            "all-frontend"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sfc-bo-commitment-ui": {
+        "name": "sfc-bo-commitment-ui",
+        "npmPkg": "@sfc-bo/commitment",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-bo-commitment-ui.git",
+        "teams": [
+            "sfc-bo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "mywp-user-profile-backend": {
+        "name": "mywp-user-profile-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-user-profile-backend-redis.git",
+        "backend": true,
+        "teams": [
+            "mywp-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-babel-backend": {
+        "name": "cc-babel-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-babel-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-babel-proto": {
+        "name": "cc-babel-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-babel-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-message-proto": {
+        "name": "cc-message-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-message-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-proto-plugin": {
+        "name": "cc-proto-plugin",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-proto-plugin.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-provider-proto": {
+        "name": "cc-provider-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-provider-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-variables-proto": {
+        "name": "cc-variables-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-variables-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-conversation-proto": {
+        "name": "cc-conversation-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-conversation-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-configuration-admin-proto": {
+        "name": "cc-configuration-admin-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-configuration-admin-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-signature-proto": {
+        "name": "cc-signature-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-signature-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-document-manager-proto": {
+        "name": "cc-document-manager-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-document-manager-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-internal-communication-proto": {
+        "name": "cc-internal-communication-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-internal-communication-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-provider-task-proto": {
+        "name": "cc-provider-task-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-provider-task-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-dynamic-task-actions-proto": {
+        "name": "cc-dynamic-task-actions-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-dynamic-task-actions-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-external-communication-proto": {
+        "name": "cc-external-communication-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-external-communication-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-proto": {
+        "name": "cc-task-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-consultation-proto": {
+        "name": "cc-consultation-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-consultation-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-taxonomy-proto": {
+        "name": "cc-taxonomy-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-taxonomy-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-participant-proto": {
+        "name": "cc-participant-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-participant-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-echecklist-proto": {
+        "name": "cc-echecklist-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-echecklist-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-portfolio-manager-proto": {
+        "name": "cc-portfolio-manager-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-portfolio-manager-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-allocation-proto": {
+        "name": "cc-task-allocation-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-allocation-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-decide-cons-proto": {
+        "name": "cc-decide-cons-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-decide-cons-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-esif-internal-consultations-proto": {
+        "name": "cc-esif-internal-consultations-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-esif-internal-consultations-proto",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-external-communication-backend": {
+        "name": "cc-external-communication-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-external-communication-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-dynamic-task-actions-backend": {
+        "name": "cc-dynamic-task-actions-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-dynamic-task-actions-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-portfolio-manager-backend": {
+        "name": "cc-portfolio-manager-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-portfolio-manager-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-process-centre-backend": {
+        "name": "cc-process-centre-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-centre-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-process-centre-proto": {
+        "name": "cc-process-centre-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-centre-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-axon-tracing": {
+        "name": "cc-axon-tracing",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-axon-tracing.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-echecklist-backend": {
+        "name": "cc-echecklist-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-echecklist-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-embedded-configuration-lib": {
+        "name": "cc-embedded-configuration-lib",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-embedded-configuration-lib.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-portfolio-provider-wave": {
+        "name": "cc-portfolio-provider-wave",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-portfolio-provider-wave.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-provider-wave": {
+        "name": "cc-task-provider-wave",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-provider-wave.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-decide-cons-backend": {
+        "name": "cc-decide-cons-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-decide-cons-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-configuration-admin-backend": {
+        "name": "cc-configuration-admin-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-configuration-admin-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-process-provider-wave": {
+        "name": "cc-process-provider-wave",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-provider-wave.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-wave-workflow-api": {
+        "name": "cc-wave-workflow-api",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-wave-workflow-api.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-kafka-sse-bridge-backend": {
+        "name": "cc-kafka-sse-bridge-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-kafka-sse-bridge-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-kafka-oracle-bridge-backend": {
+        "name": "cc-kafka-oracle-bridge-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-kafka-oracle-bridge-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-consultation-backend": {
+        "name": "cc-consultation-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-consultation-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-conversation-backend": {
+        "name": "cc-conversation-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-conversation-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-signature-backend": {
+        "name": "cc-signature-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-signature-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-zk-apache-bridge": {
+        "name": "cc-zk-apache-bridge",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-zk-apache-bridge.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": false
+        }
+    },
+    "cc-proto-schema-registry-backend": {
+        "name": "cc-proto-schema-registry-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-proto-schema-registry-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-proto-schema-registry-backend-proto": {
+        "name": "cc-proto-schema-registry-backend-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-proto-schema-registry-backend-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-clock-backend": {
+        "name": "cc-clock-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-clock-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-clock-backend-sdk": {
+        "name": "cc-clock-backend-sdk",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-clock-backend-sdk.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": false
+        }
+    },
+    "cc-clock-backend-adapter": {
+        "name": "cc-clock-backend-adapter",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-clock-backend-adapter.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-document-manager-backend": {
+        "name": "cc-document-manager-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-document-manager-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-internal-communication-backend": {
+        "name": "cc-internal-communication-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-internal-communication-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-internal-communication-reporting-backend": {
+        "name": "cc-internal-communication-reporting-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-internal-communication-reporting-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-esif-internal-consultations-backend": {
+        "name": "cc-esif-internal-consultations-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-esif-internal-consultations-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-dynamic-interactions-service-backend": {
+        "name": "cc-dynamic-interactions-service-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-dynamic-interactions-service-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-eris-service-backend": {
+        "name": "cc-eris-service-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-eris-service-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-cert-requester-backend": {
+        "name": "cc-cert-requester-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-cert-requester-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-bulk-service-backend": {
+        "name": "cc-bulk-service-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-bulk-service-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-kafka-spring-boot": {
+        "name": "cc-kafka-spring-boot",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-kafka-spring-boot.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": false
+        }
+    },
+    "cc-task-actions-backend": {
+        "name": "cc-task-actions-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-actions-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-details-backend": {
+        "name": "cc-task-details-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-details-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-manager-backend": {
+        "name": "cc-task-manager-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-manager-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-taxonomy-service-backend": {
+        "name": "cc-taxonomy-service-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-taxonomy-service-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-navtree-service-backend": {
+        "name": "cc-navtree-service-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-navtree-service-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-details-provider-camunda-poc": {
+        "name": "cc-task-details-provider-camunda-poc",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-details-provider-camunda-poc.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true,
+            "sonarScanner": true
+        }
+    },
+    "springboot-starter-backend": {
+        "name": "springboot-starter-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/zzz-springboot-starter-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-servicetask-client-backend": {
+        "name": "cc-servicetask-client-backend",
+        "npmPkg": "@cc/servicetask-client-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-servicetask-client-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-flex-backend": {
+        "name": "cc-flex-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-flex-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-sfc-broker-backend": {
+        "name": "cc-sfc-broker-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-sfc-broker-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "sfc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-task-allocation-backend": {
+        "name": "cc-task-allocation-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-allocation-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "dna-simple-springboot-server": {
+        "name": "dna-simple-springboot-server",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/dna-simple-springboot-server.git",
+        "backend": true,
+        "teams": [
+            "dna-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "dna-spring-cloud-config-server": {
+        "name": "dna-spring-cloud-config-server",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/dna-spring-cloud-config-server.git",
+        "backend": true,
+        "teams": [
+            "dna-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "dna-spring-boot-admin-server": {
+        "name": "dna-spring-boot-admin-server",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/dna-spring-boot-admin-server.git",
+        "backend": true,
+        "teams": [
+            "dna-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "dna-spring-cloud-eureka-server": {
+        "name": "dna-spring-cloud-eureka-server",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/dna-spring-cloud-eureka-server.git",
+        "backend": true,
+        "teams": [
+            "dna-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-wfbuilder-backend": {
+        "name": "cc-wfbuilder-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-wfbuilder-backend.git",
+        "backend": true,
+        "teams": [
+            "wfbuilder-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "zzz-test-package-v7-ui": {
+        "name": "zzz-test-package-v7-ui",
+        "npmPkg": "@zzz/test-package-v7",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/zzz-test-package-v7-ui.git",
+        "teams": [
+            "sample"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        }
+    },
+    "zzz-test-package-v7-el-ui": {
+        "name": "zzz-test-package-v7-el-ui",
+        "element": true,
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/zzz-test-package-v7-el-ui.git",
+        "teams": [
+            "sample"
+        ],
+        "build": {
+            "sonarScanner": false
+        },
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        }
+    },
+    "cc-task-actions-provider-proto": {
+        "name": "cc-task-actions-provider-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-task-actions-provider-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-sfcbo-wrapper-ui": {
+        "name": "cc-sfcbo-wrapper-ui",
+        "npmPkg": "@cc/sfcbo-wrapper",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-sfcbo-wrapper-ui.git",
+        "teams": [
+            "all-frontend",
+            "cc-all"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "sdg-admin-tool-ui": {
+        "name": "sdg-admin-tool-ui",
+        "npmPkg": "@sdg/admin-tool",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sdg-admin-tool-ui.git",
+        "teams": [
+            "all-frontend",
+            "sdg-frontend"
+        ]
+    },
+    "sfc-fo-programme-ui": {
+        "name": "sfc-fo-programme-ui",
+        "npmPkg": "@sfc-fo/programme",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-programme-ui.git",
+        "teams": [
+            "all-frontend",
+            "sfc-fo"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "opsys-risk-management-ui": {
+        "name": "opsys-risk-management-ui",
+        "npmPkg": "@opsys/risk-management",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-risk-management-ui.git",
+        "teams": [
+            "all-frontend",
+            "opsys-risk-management"
+        ]
+    },
+    "iop-hds-ui": {
+        "name": "iop-hds-ui",
+        "npmPkg": "@iop/hds",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/iop-hds-ui.git",
+        "teams": [
+            "all-frontend",
+            "iop-frontend"
+        ]
+    },
+    "cc-camunda-ext-api-backend": {
+        "name": "cc-camunda-ext-api-backend",
+        "npmPkg": "@cc/camunda-ext-api",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-camunda-ext-api-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true,
+            "sonarScanner": true
+        }
+    },
+    "ecol-ecollege-backend": {
+        "name": "ecol-ecollege-backend",
+        "npmPkg": "@ecol/ecollege-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/ecollege-backend.git",
+        "backend": true,
+        "teams": [
+            "ecollege",
+            "backend"
+        ],
+        "build": {
+            "publish": true,
+            "sonarScanner": true
+        }
+    },
+    "eac-pmm-lib-budget-ui": {
+        "name": "eac-pmm-lib-budget-ui",
+        "npmPkg": "@eac/pmm-lib-budget",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eac-pmm-lib-budget-ui.git",
+        "teams": [
+            "eac",
+            "all-frontend"
+        ]
+    },
+    "eac-pmm-lib-ui": {
+        "name": "eac-pmm-lib-ui",
+        "npmPkg": "@eac/pmm-lib",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/eac-pmm-lib-ui.git",
+        "teams": [
+            "eac",
+            "all-frontend"
+        ]
+    },
+    "mywp-eusearch-ui": {
+        "name": "mywp-eusearch-ui",
+        "npmPkg": "@mywp/eusearch",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/mywp-eusearch-ui.git",
+        "teams": [
+            "eusearch",
+            "digit-myworkplace",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "all"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-search"
+        }
+    },
+    "cc-esif-internal-consultations-ui": {
+        "name": "cc-esif-internal-consultations-ui",
+        "npmPkg": "@cc/esif-internal-consultations",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-esif-internal-consultations-ui.git",
+        "teams": [
+            "cc-task-manager",
+            "cc-all",
+            "cc-configuration",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "opsys-epc-sub-fo-ui": {
+        "name": "opsys-epc-sub-fo-ui",
+        "npmPkg": "@opsys/epc-sub-fo",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-epc-sub-fo-ui.git",
+        "teams": [
+            "all-frontend",
+            "opsys-eSubmission"
+        ]
+    },
+    "cc-process-participants-ui": {
+        "name": "cc-process-participants-ui",
+        "npmPkg": "@cc/process-participants",
+        "deps": [
+            "cc-shared-ui"
+        ],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-participants-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-participants",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-flex-admin-ui": {
+        "name": "cc-flex-admin-ui",
+        "npmPkg": "@cc/flex-admin",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-flex-admin-ui.git",
+        "teams": [
+            "all-frontend",
+            "cc-flex",
+            "cc-all"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "urf-register-ui": {
+        "name": "urf-register-ui",
+        "npmPkg": "@urf/register",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/urf-register-ui.git",
+        "teams": [
+            "all-frontend",
+            "urf-frontend"
+        ]
+    },
+    "opsys-map-shared-ui": {
+        "name": "opsys-map-shared-ui",
+        "npmPkg": "@opsys/map-shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-map-shared-ui.git",
+        "teams": [
+            "opsys-tag",
+            "opsys-dac",
+            "opsys-iop-map",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "opsys-track3"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-opsys"
+        }
+    },
+    "cc-pmm-participants-ui": {
+        "name": "cc-pmm-participants-ui",
+        "npmPkg": "@cc/pmm-participants",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-pmm-participants-ui.git",
+        "teams": [
+            "eac",
+            "all-frontend"
+        ]
+    },
+    "pmob-core-ui": {
+        "name": "pmob-core-ui",
+        "npmPkg": "@pmob/core",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/pmob-core-ui.git",
+        "teams": [
+            "all-frontend",
+            "pmo-mobile-all-frontend",
+            "pmo-mobile-core"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-pmo-mobile"
+        }
+    },
+    "pmob-shared-ui": {
+        "name": "pmob-shared-ui",
+        "npmPkg": "@pmob/shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/pmob-shared-ui.git",
+        "teams": [
+            "all-frontend",
+            "pmo-mobile-all-frontend",
+            "pmo-mobile",
+            "pmo-mobile-mips"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-pmo-mobile"
+        }
+    },
+    "pmob-mips-ui": {
+        "name": "pmob-mips-ui",
+        "npmPkg": "@pmob/mips",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/pmob-mips-ui.git",
+        "teams": [
+            "all-frontend",
+            "pmo-mobile-all-frontend",
+            "pmo-mobile",
+            "pmo-mobile-mips"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-pmo-mobile"
+        }
+    },
+    "pdm-external-communication-ui": {
+        "name": "pdm-external-communication-ui",
+        "npmPkg": "@pdm/external-communication",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/pdm-external-communication-ui.git",
+        "teams": [
+            "pdm-frontend",
+            "all-frontend"
+        ]
+    },
+    "opsys-map-implementation-plan-ui": {
+        "name": "opsys-map-implementation-plan-ui",
+        "npmPkg": "@opsys/map-implementation-plan",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/opsys-map-implementation-plan-ui.git",
+        "teams": [
+            "opsys-iop-map",
+            "all-frontend"
+        ]
+    },
+    "sfc-fo-part-agree-ui": {
+        "name": "sfc-fo-part-agree-ui",
+        "npmPkg": "@sfc-fo/part-agree",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-part-agree-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    },
+    "cc-process-shared-ui": {
+        "name": "cc-process-shared-ui",
+        "npmPkg": "@cc/process-shared",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-process-shared-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-participants",
+            "all-frontend"
+        ]
+    },
+    "cc-blocks-ui": {
+        "name": "cc-blocks-ui",
+        "npmPkg": "@cc/blocks",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-blocks-ui.git",
+        "teams": [
+            "cc-task-details",
+            "cc-all",
+            "cc-participants",
+            "all-frontend"
+        ],
+        "packageGroups": [
+            "task"
+        ]
+    },
+    "cc-reports-proto": {
+        "name": "cc-reports-proto",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-reports-proto.git",
+        "backend": true,
+        "teams": [
+            "cc-reports",
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-reports-backend": {
+        "name": "cc-reports-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-reports-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-reports",
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "cc-reports-generator-backend": {
+        "name": "cc-reports-generator-backend",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/cc-reports-generator-backend.git",
+        "backend": true,
+        "teams": [
+            "cc-reports",
+            "cc-backend",
+            "backend"
+        ],
+        "build": {
+            "publish": true
+        }
+    },
+    "pmob-agm-ui": {
+        "name": "pmob-agm-ui",
+        "npmPkg": "@pmob/agm",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/pmob-agm-ui.git",
+        "teams": [
+            "all-frontend"
+        ]
+    },
+    "sfc-fo-capplan-ui": {
+        "name": "sfc-fo-capplan-ui",
+        "npmPkg": "@sfc-fo/capplan",
+        "deps": [],
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/sfc-fo-capplan-ui.git",
+        "teams": [
+            "sfc-fo",
+            "all-frontend"
+        ],
+        "build": {
+            "skipLint": true
+        },
+        "slack": {
+            "channel": "csdr-timeline-sfc"
+        }
+    }
+}

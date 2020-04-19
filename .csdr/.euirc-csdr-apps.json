@@ -1,0 +1,623 @@
+{
+    "my-workplace": {
+        "name": "my-workplace",
+        "folder": "apps/my-workplace",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-my-workplace-base.git",
+        "confluencePageId": "856430776",
+        "slack": {
+            "channel": "csdr-timeline-mwp"
+        },
+        "packages": [
+            "devops-metadata",
+            "csdr-core-ui",
+            "mywp-core-ui",
+            "mywp-shared-ui",
+            "mywp-dashboard-ui",
+            "mywp-notifications-ui",
+            "mywp-portfolio-ui",
+            "mywp-portfolio-el-ui",
+            "mywp-portfolio-admin-ui",
+            "mywp-common-widgets-ui",
+            "mywp-collab-widgets-ui",
+            "mywp-search-ui",
+            "mywp-admin-ui",
+            "mywp-eusearch-ui",
+            "eui-dynamic-forms-ui",
+            "eui-zipkin-trace-ui",
+            "cc-echecklist-admin-el-ui",
+            "cc-echecklist-admin-ui",
+            "cc-flex-el-ui",
+            "cc-flex-admin-ui",
+            "cc-task-details-ui",
+            "cc-configuration-admin-ui",
+            "cc-decide-cons-ui",
+            "cc-process-centre-ui",
+            "cc-process-centre-admin-ui",
+            "cc-shared-ui",
+            "cc-task-manager-ui",
+            "cc-document-manager-ui",
+            "cc-process-orchestrator-ui",
+            "cc-clock-ui",
+            "cc-task-actions-ui",
+            "cc-participants-ui",
+            "cc-blocks-ui",
+            "cc-process-participants-ui",
+            "cc-internal-communication-ui",
+            "cc-external-communication-ui",
+            "cc-consultation-ui",
+            "cc-taxonomy-ui",
+            "opsys-epc-erq-budget-breakdown-ui",
+            "opsys-epc-erq-catalog-ui",
+            "opsys-epc-erq-rfs-ui",
+            "opsys-epc-erq-spreadsheet-ui",
+            "opsys-epc-erq-utilities-ui",
+            "opsys-demand-manager-ui",
+            "opsys-oe-track3-ui",
+            "opsys-result-ui",
+            "opsys-result-quality-management-ui",
+            "opsys-epc-procedure-manager-ui",
+            "opsys-epc-esub-bo-ui",
+            "opsys-payment-forecast-ui",
+            "opsys-level2-forecast-ui",
+            "opsys-digit-dashboard-ui",
+            "opsys-forecasting-dashboard-ui",
+            "opsys-dac-form-ui",
+            "opsys-tag-manager-ui",
+            "opsys-shared-ui",
+            "opsys-budget-envelope-ui",
+            "opsys-map-ui",
+            "opsys-map-shared-ui",
+            "opsys-epc-sub-fo-ui",
+            "opsys-map-implementation-plan-ui",
+            "sygma-sygma-ui",
+            "sygma-dynamic-forms-ui",
+            "cotg-shared-ui",
+            "cotg-my-requests-ui",
+            "cotg-time-management-ui",
+            "eamr-report-ui",
+            "ecfin-rss-feed-ui",
+            "ease-admin-ui",
+            "mywp-config",
+            "cc-process-shared-ui",
+            "cc-kafka-spring-boot",
+            "cc-portfolio-provider-wave",
+            "cc-process-provider-wave",
+            "cc-task-provider-wave",
+            "cc-wave-workflow-api",
+            "cc-embedded-configuration-lib",
+            "cc-babel-backend",
+            "cc-clock-backend",
+            "cc-document-manager-backend",
+            "cc-echecklist-backend",
+            "cc-external-communication-backend",
+            "cc-internal-communication-backend",
+            "cc-internal-communication-reporting-backend",
+            "cc-bulk-service-backend",
+            "cc-esif-internal-consultations-backend",
+            "cc-kafka-oracle-bridge-backend",
+            "cc-kafka-sse-bridge-backend",
+            "cc-portfolio-manager-backend",
+            "cc-process-centre-backend",
+            "cc-proto-plugin",
+            "cc-task-actions-backend",
+            "cc-task-details-backend",
+            "cc-task-manager-backend",
+            "cc-taxonomy-service-backend",
+            "mywp-user-profile-backend",
+            "cc-consultation-backend",
+            "cc-conversation-backend",
+            "cc-signature-backend",
+            "cc-zk-apache-bridge",
+            "cc-proto-schema-registry-backend",
+            "cc-proto-schema-registry-backend-proto",
+            "cc-cert-requester-backend",
+            "cc-clock-backend-adapter",
+            "cc-sfc-broker-backend",
+            "cc-flex-backend",
+            "cc-task-allocation-backend",
+            "cc-dynamic-interactions-service-backend",
+            "cc-eris-service-backend",
+            "cc-babel-proto",
+            "cc-consultation-proto",
+            "cc-conversation-proto",
+            "cc-document-manager-proto",
+            "cc-echecklist-proto",
+            "cc-internal-communication-proto",
+            "cc-message-proto",
+            "cc-provider-proto",
+            "cc-participant-proto",
+            "cc-process-centre-proto",
+            "cc-provider-task-proto",
+            "cc-portfolio-manager-proto",
+            "cc-signature-proto",
+            "cc-task-proto",
+            "cc-taxonomy-proto",
+            "cc-variables-proto",
+            "cc-task-allocation-proto",
+            "cc-decide-cons-proto",
+            "cc-esif-internal-consultations-proto",
+            "cc-axon-tracing",
+            "dna-spring-cloud-config-server",
+            "dna-simple-springboot-server",
+            "dna-spring-boot-admin-server",
+            "dna-spring-cloud-eureka-server",
+            "cc-wfbuilder-backend",
+            "cc-configuration-admin-backend",
+            "cc-decide-cons-backend",
+            "cc-esif-internal-consultations-ui",
+            "cc-pmm-participants-ui",
+            "pdm-external-communication-ui",
+            "cc-reports-proto",
+            "cc-reports-backend",
+            "cc-reports-generator-backend"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "compiledTranslations": true,
+            "baseHref": "/mwp/"
+        },
+        "config": {
+            "npmPkg": "@mywp/config"
+        },
+        "appSources": {
+            "external": true,
+            "npmPkg": "@mywp/core",
+            "folder": "assets/app-sources"
+        },
+        "mock": {
+            "external": true,
+            "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-my-workplace-mock.git",
+            "folder": "packages/mywp-mock"
+        }
+    },
+    "my-workplace-e2e": {
+        "name": "my-workplace-e2e",
+        "folder": "apps/my-workplace-e2e",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-my-workplace-e2e.git",
+        "packages": []
+    },
+    "eui-playground": {
+        "name": "eui-playground",
+        "folder": "apps/eui-playground",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-playground.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "includeMajorVersion": true,
+                "folder": "eui-playground"
+            }
+        },
+        "packages": [
+            "eui"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeleton": true
+    },
+    "eui-showcase-root": {
+        "name": "eui-showcase-root",
+        "folder": "apps/eui-showcase-root",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-root.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "/"
+            }
+        },
+        "packages": [],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-ecl": {
+        "name": "eui-showcase-ecl",
+        "folder": "apps/eui-showcase-ecl",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-ecl.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/ecl-core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-ecl",
+                "includeMajorVersion": true,
+                "docPackage": {
+                    "name": "@eui/ecl-core",
+                    "folder": "eui-docs-ecl"
+                }
+            }
+        },
+        "packages": [
+            "eui",
+            "eui-ecl"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-mwp": {
+        "name": "eui-showcase-mwp",
+        "folder": "apps/eui-showcase-mwp",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-mwp.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-mwp",
+                "includeMajorVersion": true
+            }
+        },
+        "packages": [
+            "eui"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-ionic": {
+        "name": "eui-showcase-ionic",
+        "folder": "apps/eui-showcase-ionic",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-ionic.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/ionic"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-ionic",
+                "includeMajorVersion": true,
+                "docPackage": {
+                    "name": "@eui/ionic",
+                    "folder": "eui-docs-ionic"
+                }
+            }
+        },
+        "packages": [
+            "eui",
+            "eui-ionic"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-eui": {
+        "name": "eui-showcase-eui",
+        "folder": "apps/eui-showcase-eui",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-eui.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-eui",
+                "includeMajorVersion": true,
+                "docPackage": {
+                    "name": "@eui/components",
+                    "folder": "eui-docs-components"
+                }
+            }
+        },
+        "packages": [
+            "eui"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-ux": {
+        "name": "eui-showcase-ux",
+        "folder": "apps/eui-showcase-ux",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-ux.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/core"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-ux",
+                "includeMajorVersion": true,
+                "docPackage": {
+                    "name": "@eui/core",
+                    "folder": "eui-docs-ux"
+                }
+            }
+        },
+        "packages": [
+            "eui"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeletonEuiShowcase": true
+    },
+    "eui-showcase-dynamic-forms": {
+        "name": "eui-showcase-dynamic-forms",
+        "folder": "apps/eui-showcase-dynamic-forms",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui-showcase-dynamic-forms.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "openid": false,
+            "snapshotBuildOptimized": true,
+            "versionStrategy": {
+                "type": "ROOT_PACKAGE",
+                "rootPackageName": "@eui/dynamic-forms"
+            },
+            "distribution": {
+                "bucketName": "eui-distros",
+                "bucketNameSnapshot": "eui-distros-dev",
+                "dynamicBaseHref": true,
+                "folder": "eui-showcase-dynamic-forms",
+                "includeMajorVersion": true,
+                "docPackage": {
+                    "name": "@eui/dynamic-forms",
+                    "folder": "eui-docs-dynamic-forms"
+                }
+            }
+        },
+        "packages": [
+            "eui",
+            "eui-dynamic-forms-ui"
+        ],
+        "slack": {
+            "channel": "csdr-timeline-eui"
+        },
+        "csdrSkeleton": true
+    },
+    "kiddymob": {
+        "name": "kiddymob",
+        "folder": "apps/kiddymob",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-kiddymob.git",
+        "build": {
+            "maven": true
+        },
+        "packages": []
+    },
+    "sedia": {
+        "name": "sedia",
+        "folder": "apps/sedia",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-sedia.git",
+        "packages": [
+            "ppxms-contract-details-ui",
+            "ppxms-process-manager-ui",
+            "ppxms-action-launcher-ui",
+            "urf-register-ui"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true
+        }
+    },
+    "eac-pmm": {
+        "name": "eac-pmm",
+        "folder": "apps/eac-pmm",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eac-pmm.git",
+        "packages": [
+            "eac-core-ui",
+            "eac-shared-ui",
+            "eac-pmm-lib-budget-ui",
+            "eac-pmm-lib-ui",
+            "cc-task-manager-ui",
+            "cc-shared-ui",
+            "cc-taxonomy-ui",
+            "mywp-mock"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "compiledTranslations": true,
+            "translationScopes": "eui,csdr,eac",
+            "baseHref": "./"
+        }
+    },
+    "sfc-fo": {
+        "name": "sfc-fo",
+        "folder": "apps/sfc-fo",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-sfc-fo.git",
+        "packages": [
+            "sfc-fo-core-ui",
+            "sfc-fo-shared-ui",
+            "sfc-fo-cci-request-ui",
+            "sfc-fo-cci-request-el-ui",
+            "sfc-fo-comdec-ui",
+            "sfc-fo-comdec-el-ui",
+            "sfc-fo-programme-ui",
+            "sfc-fo-part-agree-ui",
+            "sfc-fo-capplan-ui"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "compiledTranslations": true,
+            "translationScopes": "eui,csdr,sfc-fo"
+        }
+    },
+    "sfc-bo": {
+        "name": "sfc-bo",
+        "folder": "apps/sfc-bo",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-sfc-bo.git",
+        "packages": [
+            "sfc-bo-core-ui",
+            "sfc-bo-commitment-ui"
+        ],
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "compiledTranslations": true,
+            "translationScopes": "eui,csdr,sfc-bo",
+            "baseHref": "/sfc-bo/"
+        }
+    },
+    "sdg": {
+        "name": "sdg",
+        "folder": "apps/sdg",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-sdg.git",
+        "build": {
+            "skipLint": false,
+            "skipTest": false,
+            "maxSpaceSize": true,
+            "compiledTranslations": true
+        },
+        "packages": [
+            "sdg-admin-tool-ui"
+        ],
+        "csdrSkeleton": true
+    },
+    "pmo-mobile": {
+        "name": "pmo-mobile",
+        "folder": "apps/pmo-mobile",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-pmo-mobile.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "distribution": {
+                "bucketName": "eui-distros",
+                "dynamicBaseHref": true,
+                "folder": "pmo-mobile",
+                "includeMajorVersion": false
+            }
+        },
+        "packages": [
+            "pmob-core-ui",
+            "pmob-shared-ui",
+            "pmob-mips-ui",
+            "pmob-agm-ui"
+        ],
+        "csdrSkeleton": true,
+        "features": {
+            "external": true,
+            "npmPkg": "@pmob/core",
+            "folder": "assets/features"
+        }
+    },
+    "ecollege": {
+        "name": "ecollege",
+        "folder": "apps/ecollege",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-ecollege.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true,
+            "distribution": {
+                "bucketName": "eui-distros",
+                "dynamicBaseHref": true,
+                "folder": "ecollege",
+                "includeMajorVersion": false
+            }
+        },
+        "packages": [],
+        "csdrSkeleton": true
+    },
+    "csdr-training": {
+        "name": "csdr-training",
+        "folder": "apps/csdr-training",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-csdr-training.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true
+        },
+        "packages": [],
+        "csdrSkeleton": true
+    },
+    "eui9-test": {
+        "name": "eui9-test",
+        "folder": "apps/eui9-test",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-eui9-test.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true
+        },
+        "packages": [],
+        "csdrSkeleton": true
+    },
+    "test-eui9": {
+        "name": "test-eui9",
+        "folder": "apps/test-eui9",
+        "repository": "webgate.ec.europa.eu/CITnet/stash/scm/csdr/app-test-eui9.git",
+        "build": {
+            "skipLint": true,
+            "skipTest": true,
+            "maxSpaceSize": true
+        },
+        "packages": []
+    }
+}
